@@ -1,0 +1,22 @@
+{
+  "name": "@kidonng/vuepress-plugin-contributors",
+  "version": "0.1.0",
+  "description": "VuePress plugin for showing GitHub contributors",
+  "license": "MIT",
+  "repository": "kidonng/vuepress-plugin-contributors",
+  "author": {
+    "name": "Kid",
+    "email": "hi@xuann.wang",
+    "url": "https://xuann.wang"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "ky": "^0.24.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
