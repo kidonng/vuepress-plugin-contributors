@@ -9,7 +9,6 @@ module.exports = (options = {}, ctx) => ({
       docsRepo: docsRepo || repo,
       docsBranch,
       docsDir,
-      label: 'Contributors',
       ...options
     }
   },

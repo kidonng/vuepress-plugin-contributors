@@ -1,6 +1,6 @@
 <template>
   <div class="contributors" v-show="contributors.length">
-    <span>{{ $page.contributors.label }}</span>
+    <span>{{ label }}</span>
     <a
       v-for="{ username, id } in contributors"
       :key="id"
@@ -24,6 +24,11 @@ export default {
   data: () => ({
     contributors: [],
   }),
+  computed: {
+    label() {
+      return this.$themeLocaleConfig.contributorsLabel || this.$page.contributors.label || 'Contributors'
+    }
+  },
   watch: {
     $route: {
       handler({ path }, prev) {

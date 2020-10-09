@@ -22,7 +22,14 @@ module.exports = {
       // Contributors label (defaults to `Contributors`)
       label: 'Authors'
     }]
-  ]
+  ],
+  // i18n
+  themeConfig: {
+    locales: {
+      '/': { contributorsLabel: 'Authors' },
+      '/zh/': { contributorsLabel: '贡献者' }
+    }
+  }
 }
 ```
 
