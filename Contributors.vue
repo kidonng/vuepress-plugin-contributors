@@ -1,5 +1,5 @@
 <template>
-  <div class="contributors">
+  <div class="contributors" v-show="contributors.length">
     <span>{{ $page.contributors.label }}</span>
     <a
       v-for="{ username, id } in contributors"
@@ -30,6 +30,8 @@ export default {
         if (typeof window === 'undefined' || (prev && path === prev.path))
           return
 
+        this.contributors.length = 0
+
         const { docsRepo, docsBranch, docsDir } = this.$page.contributors
         const [user, repo] = docsRepo.split('/')
 
@@ -43,6 +45,7 @@ export default {
         })
           .json()
           .then((data) => (this.contributors = data))
+          .catch((e) => console.error(e))
       },
       immediate: true,
     },
