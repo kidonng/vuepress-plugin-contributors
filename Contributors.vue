@@ -37,10 +37,10 @@ export default {
 
         this.contributors.length = 0
 
-        const { docsRepo, docsBranch, docsDir } = this.$page.contributors
+        const { docsRepo, docsBranch, docsDir, api } = this.$page.contributors
         const [user, repo] = docsRepo.split('/')
 
-        ky('https://github-file-contributors.vercel.app/api', {
+        ky(api || 'https://api.xuann.wang/api/github-file-contributors', {
           searchParams: {
             user,
             repo,

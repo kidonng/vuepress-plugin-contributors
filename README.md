@@ -1,6 +1,6 @@
 # [VuePress](https://vuepress.vuejs.org/) Contributors Plugin
 
-This plugin provides a component for showing GitHub contributors. It uses [GitHub File Contributors](https://github.com/kidonng/github-file-contributors) under the hood.
+This plugin provides a component for showing GitHub contributors. It uses [GitHub File Contributors API](https://github.com/kidonng/api#github-file-contributors) under the hood.
 
 ![Screenshot](screenshot.png)
 
@@ -20,7 +20,9 @@ module.exports = {
       // Document directory (defaults to `themeConfig.docsDir`)
       docsDir: 'docs',
       // Contributors label (defaults to `Contributors`)
-      label: 'Authors'
+      label: 'Authors',
+      // API endpoint (defaults to https://api.xuann.wang/api/github-file-contributors)
+      api: 'https://example.com'
     }]
   ],
   // i18n
